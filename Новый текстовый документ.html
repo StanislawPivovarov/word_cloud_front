@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/ms-dropdown@4.0.3/dist/css/dd.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/ms-dropdown@4.0.3/dist/js/dd.min.js"></script>
+
+
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .colorPicker {
+            width: 100px;
+            height: 52px;
+            background-color: blue;
+            margin: 10px;
+            text-align: center
+        }
+        /*Это обязательно нужно оставить*/
+        .ms-dd {
+            width: 100px;
+            height: 10px;
+        }
+
+        .colorPicker input {
+            width: 80%;
+            height: 80%;
+            transform: translateY(8%);
+        }
+
+        .inputTextColorBackground {
+            margin-left: auto;
+            margin-right: auto;
+            width: 6em
+        }
+    </style>
+
+</head>
+
+<body>
+<form>
+    <div>
+        <p>Выберите картинку</p>
+        <select id="webmenus" name="webmenu" is="ms-dropdown" onchange="saveImage()">
+            <option value="tiger.png" data-image="C:\Users\amir1\OneDrive\Рабочий стол\tiger.png"></option>
+            <option value="сердце1920.png" data-image="C:\Users\amir1\OneDrive\Рабочий стол\сердце1920.png"></option>
+            <option value="Барашек.png" data-image="C:\Users\amir1\OneDrive\Рабочий стол\Барашек.png"></option>
+            <option value="Rainbow.png" data-image="C:\Users\amir1\OneDrive\Рабочий стол\Rainbow.png"></option>
+        </select>
+        <script>
+            function saveImage() {
+                console.log(document.getElementById("webmenus").value);
+            }
+        </script>
+    </div>
+    <div class="inputTextColorBackground">
+        <p>Выберите цвет фона</p>
+        <input type="color" id="get_hex_text">
+
+        <script>
+            get_hex_text.addEventListener("input", function () {
+                console.log(get_hex_text.value);
+            });
+        </script>
+    </div>
+
+    <div class="inputTextColorBackground">
+        <p>Выберите цвет текта</p>
+        <input type="color" id="get_hex_background">
+
+        <script>
+            get_hex_background.addEventListener("input", function () {
+                console.log(get_hex_background.value);
+            });
+        </script>
+    </div>
+</form>
+</body>
+</html>
