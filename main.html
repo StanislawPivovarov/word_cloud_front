@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/ms-dropdown@4.0.3/dist/js/dd.min.js"></script>
+    <script src ="./script/script.js"></script>
+</head>
+
+<body>
+        <div class="background">
+            <div class="wrapper-header">
+                <p class="header-name">Облако слов</p>
+                <div class="links">
+                    <button onclick="location.href='./index/login.html'" class="login">Войти</button>
+                    <button onclick="location.href='./index/register.html'" class="sign-up">Зарегистрироваться</button>
+                </div>
+               
+            </div>
+        </div>
+        
+            
+        
+        <div class="inline-settings">
+            <div class="choosing-image">
+                <p class="choose-image">Выберите картинку</p>
+                <select id="webmenus" name="webmenu" class="webmenue" is="ms-dropdown" onchange="saveImage()">
+                    <option value="tiger.png" data-image="C:\Users\amir1\OneDrive\Рабочий стол\tiger.png"></option>
+                    <option value="сердце1920.png" data-image="C:\Users\amir1\OneDrive\Рабочий стол\сердце1920.png"></option>
+                    <option value="Барашек.png" data-image="C:\Users\amir1\OneDrive\Рабочий стол\Барашек.png"></option>
+                    <option value="Rainbow.png" data-image="C:\Users\amir1\OneDrive\Рабочий стол\Rainbow.png"></option>
+                </select>
+            </div>
+            <div class="coosing-color-text">
+                <p>Выберите цвет фона</p>
+                <input type="color" id="get_hex_text" value="#dfc28e">
+            </div>
+            <div class="coosing-color-back">
+                <p>Выберите цвет текта</p>
+                <input type="color" id="get_hex_background" value="#c4ac7f">
+            </div>
+        </div>
+
+        <div class="result-input">
+            <div class="wordinput">
+                <input type="text" placeholder="Введите слова">
+                <button class="get-result">Результат</button>
+            </div>
+            <div class="img-result"></div>
+        </div>
+       
+    
+
+</body>
+<script>
+    get_hex_text.addEventListener("input", function () {
+        console.log(get_hex_text.value);
+    });
+
+    get_hex_background.addEventListener("input", function () {
+        console.log(get_hex_text.value);
+    });
+</script>
+</html>
