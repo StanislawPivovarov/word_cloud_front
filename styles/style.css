@@ -90,14 +90,13 @@ body{
 
 .wordinput button{
     margin-top: 20px;
-    width: 50%;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     background-color: #DFC28E;
     border: 0px;
     height: 25px;
-    width: 200px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
 
@@ -108,4 +107,23 @@ body{
     height: 350px;
     background-color: #DFC28E;
     border-radius: 5px;
+}
+
+@media (max-width: 992px) {
+    .inline-settings{
+        flex-direction: column;
+        align-items: center;
+    }
+    .result-input{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .wordinput{
+        width: 70%;
+    }
+    .img-result{
+        width: 100%;
+        margin-top: 30px;
+    }
 }
